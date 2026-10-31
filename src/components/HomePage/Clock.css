@@ -1,0 +1,94 @@
+.clock-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 38px;
+  margin-top: 20px;
+}
+
+.clock-item {
+  position: relative;
+  width: 82px;
+  text-align: center;
+}
+
+.clock-item__remove {
+  position: absolute;
+  top: 20px;
+  right: -8px;
+  z-index: 1;
+  display: grid;
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid #222;
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  font: 16px/1 Arial, sans-serif;
+  cursor: pointer;
+}
+
+.clock-item__remove:hover {
+  background: #eee;
+}
+
+.clock-item__remove:focus-visible {
+  outline: 2px solid #222;
+  outline-offset: 2px;
+}
+
+.clock-item__title {
+  margin-bottom: 9px;
+  color: #111;
+  font-size: 14px;
+}
+
+.clock {
+  --clock-size: 82px;
+
+  position: relative;
+  width: var(--clock-size);
+  height: var(--clock-size);
+  border: 1px solid #222;
+  border-radius: 50%;
+}
+
+.clock__hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: center bottom;
+}
+
+.clock__hand--hour {
+  width: 2px;
+  height: 25px;
+  background: #111;
+  transform: translateX(-50%) rotate(var(--hour-angle));
+}
+
+.clock__hand--minute {
+  width: 2px;
+  height: 34px;
+  background: #111;
+  transform: translateX(-50%) rotate(var(--minute-angle));
+}
+
+.clock__hand--second {
+  width: 1px;
+  height: 36px;
+  background: repeating-linear-gradient(to top, #111 0 3px, transparent 3px 6px);
+  transform: translateX(-50%) rotate(var(--second-angle));
+}
+
+.clock__pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #111;
+  transform: translate(-50%, -50%);
+}

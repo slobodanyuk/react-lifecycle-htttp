@@ -1,0 +1,33 @@
+.add-clock {
+  display: flex;
+  align-items: end;
+  gap: 38px;
+}
+
+.add-clock label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #111;
+  font-size: 14px;
+}
+
+.add-clock input {
+  width: 160px;
+  height: 32px;
+  box-sizing: border-box;
+  border: 1px solid #222;
+  border-radius: 0;
+  background: white;
+  color: #111;
+}
+
+.add-clock button {
+  width: 120px;
+  height: 32px;
+  border: 1px solid #222;
+  border-radius: 0;
+  background: white;
+  color: #111;
+  cursor: pointer;
+}
